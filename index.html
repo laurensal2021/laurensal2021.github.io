@@ -1,0 +1,94 @@
+<DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" type="image/-icon" href="favicon.png">
+	<link rel="stylesheet" href="styles.css">
+	<title>Lauren & Salvatore</title>
+
+</head>
+<body>
+	<div class="uniDiv">
+	    <h1>Lauren & Salvatore Est.2021</h1>
+	</div>
+	
+	<div class="uniDiv" style="margin-bottom: 0px;">
+	    
+	    <button class="button" onclick="myFunction()">SPIN BUTTON</button>	
+	    <h1 id="command">Press Spin Button</h1>
+	</div>
+	
+	<a onclick="myFunction()">
+	<div class="uniDivMid">
+		<img id="myImg" src="start.png" class="respimg">
+	</div>
+	</a>
+
+	
+	<div class="uniDivtwist">
+		<p id="rules" style="text-align:center;"><u><b>General Rules:</b></u><br></p>
+		
+		<p id="rules">Mission: Outlast other players by only putting hands and feet on the pictures according to the spinner.<br><br>
+			
+			1) All players stand off the board at the start of the game.<br><br>
+			2) Taking turns in an ordered sequence, the designated spinner or ref will spin the spinner.<br><br>
+			3) The player must complete the task assigned by the spinner. For example: "Left Foot" on "Picture A".<br><br>
+			4) A picture can only have one hand or foot occupying it at a time.<br><br>
+			5) If the spinner issues a command and no pictures are available, then spin again.<br><br>
+			6) Hands and feet that are assigned to pictures are not allowed to be moved off of them. However, the ref may allow this temporarily while other players are attempting to move to their assigned spots.<br><br>
+			7) Only hands and feet are allowed to touch the ground. Any player that violates this is out of the game.<br><br>
+			8) Last player left on the mat is the winner!<br><br>
+			
+			<br>
+			Alternatively, before starting the game, players can make up rules to play how they want to make the games more interesting!<br><br>
+			
+			
+			
+			<span style="color:#000080;"><b>Warning:</b> Players should <b>"Warm-up"</b> and <b>"Stretch"</b> before playing. Certain positions may cause burning sensation in areas you did not know existed! HAVE FUN!</span>
+			
+			
+		</p>
+		
+	<div style="border-top: solid #000080 2px;"></div>
+	
+		<p><a href="terms.html" id="footlink" target="_blank">Terms and Conditions</a><span style="float:right;"> Copyright &#169; 2021</span></p>
+		<p><a href="privacy.html" id="footlink" target="_blank">Privacy Policy</a><span style="float:right;"> For Non-Commercial Use Only!</span></p>
+	</div>
+
+	<script>
+	var counter=0;
+	
+	function repeat()
+	{	
+		window.setTimeout(myFunction, 100);
+	}
+	
+	function myFunction() {
+	    var pic = ["one.jpg","two.jpg","three.jpg","four.jpg","five.jpg","six.jpg","seven.jpg","eight.jpg","nine.jpg","ten.jpg"];
+	    var rand = pic[Math.floor(Math.random()*pic.length)]; 
+	    document.getElementById("myImg").src = rand;
+	    
+	    
+	    
+	    var com = ["RIGHT HAND","LEFT HAND","RIGHT FOOT","LEFT FOOT","RIGHT HAND","LEFT HAND","RIGHT FOOT","LEFT FOOT","LEFT FOOT","RIGHT HAND","RIGHT FOOT","LEFT HAND"];
+	    var randcom = com[Math.floor(Math.random()*com.length)];
+	    
+	    var randcom1 = "DONE ";
+	    document.getElementById("command").innerHTML = "~SPINNING~";//+randcom;
+	    
+	    if (counter<8){
+	    repeat();
+	    counter = counter+1;
+	    }
+		
+		else {
+			counter = 0;
+			document.getElementById("command").innerHTML = randcom+" on:";
+		}
+	 }  
+
+	</script>
+
+</body>
+</html>

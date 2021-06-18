@@ -1,0 +1,108 @@
+
+body,html {
+	background-color:#4682b4;
+	color:#000080;
+}
+
+.uniDiv {
+    text-align: center;
+    background-color: white; /*gray;*/
+    margin:0px 10px 20px 15px;
+    padding:2px;
+    border: solid black 2px;/**/
+}
+
+.uniDivMid {
+    text-align: center;
+    background-color: black;
+    margin:0px 10px 20px 15px;
+    padding:2px;
+}
+
+.uniDivtwist {
+	margin:0px 10px 20px 15px;
+    padding:2px;
+	border-bottom: solid black 4px;
+	background-color:white;
+	border: solid black 1px;
+}
+
+.button {
+	width:60%;
+	padding: 15px 25px;
+	font-size: 24px;
+	text-align: center;
+	cursor: pointer;
+	outline: none;
+	color: white;/*#000080;*/
+	background-color: #3d3d3d;
+	border: none;
+	border-radius: 15px;
+	box-shadow: 0 9px #000080;
+	margin-bottom:15px;
+	margin-top:15px;
+}
+
+.button:hover {
+	background-color: lightgray;
+	color: #000080;
+}
+
+.button:active {
+	background-color: lightgray;
+	box-shadow: 0 5px black;
+	transform: translateY(4px);
+}
+
+
+.respimg {
+	cursor: pointer;
+	height:50%;
+	width:50%;
+	background-color:lightgray;
+	animation-name: flicker;
+	animation-duration: 8s;
+	animation-iteration-count: infinite;
+}
+
+
+@keyframes flicker {
+	0%   {background-color:#4682b4;}
+	25%  {background-color:white;}
+	50%  {background-color:#000080;}
+	75%  {background-color:white;}
+	100%   {background-color:#4682b4;}
+}
+
+@media screen and (max-width: 800px) {
+	.respimg {
+		width:100%;
+		height:50%;
+	}
+}
+
+@media screen and (max-width: 650px) {
+	.respimg {
+		width:100%;
+		height:50%;
+	}
+}
+
+
+@media screen and (max-width: 300px) {
+	.respimg {
+		width:100%;
+		height:50%;
+	}
+}
+
+#rules {
+	text-align:left;
+	font-size:20px;
+	background:white;
+}
+
+#footlink {
+	text-decoration:none;
+	color: #000080;
+}
